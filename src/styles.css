@@ -1,3 +1,16 @@
 .error-message {
     color: red;
 }
+
+img {
+    width: 150px;
+    height: 100px;
+}
+
+/*#country {*/
+/*    text-align: center;*/
+/*    padding: 20px;*/
+/*    border: 2px solid black;*/
+/*    background-color: lightblue;*/
+/*    width: 200px;*/
+/*}*/
