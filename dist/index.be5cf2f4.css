@@ -7,11 +7,23 @@ img {
     height: 100px;
 }
 
-/*#country {*/
-/*    text-align: center;*/
-/*    padding: 20px;*/
-/*    border: 2px solid black;*/
-/*    background-color: lightblue;*/
-/*    width: 200px;*/
-/*}*/
+#africa {
+    color: blue;
+}
+
+#americas {
+    color: green;
+}
+
+#asia {
+    color: red;
+}
+
+#europe {
+    color: yellow;
+}
+
+#oceania {
+    color: purple;
+}
 /*# sourceMappingURL=index.be5cf2f4.css.map */

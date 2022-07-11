@@ -470,13 +470,21 @@ const countryData = document.getElementById('country');
 async function fetchCountryInfo() {
     try {
         const response = await _axiosDefault.default.get('https://restcountries.com/v2/all');
-        console.log(response.data); //Dit is de request
-        allCountries(response.data);
-    //Hier de data injecteren!
+        //Dit is de request
+        //Methode om de landen op inwoners te sorteren: van laag-hoog
+        function sortAllCountries() {
+            const sortedCountries = document.getElementById('country');
+            sortedCountries.innerHTML = sortedCountries.data.population.sort((a, b)=>{
+                if (a.population < b.population) return -1;
+                if (a.population > b.population) return 1;
+            });
+            console.log(sortedCountries);
+        }
     } catch (error) {
         console.error(error); //Dit is de error catch
     //Hier de errormelding injecteren in browser
     }
+    sortAllCountries();
 }
 fetchCountryInfo();
 function allCountries(countryList) {
@@ -489,8 +497,15 @@ function allCountries(countryList) {
  </li>
 `;
     });
-}
-allCountries(countries);
+} // function countryColor() {
+ //     if (response.data.region === "Africa") {
+ //         return document.getElementById("country").name.color = "blue" ;
+ //     }
+ //
+ //
+ //
+ // }
+ // countryColor()
 
 },{"axios":"1IeuP","@parcel/transformer-js/src/esmodule-helpers.js":"ciiiV"}],"1IeuP":[function(require,module,exports) {
 module.exports = require('./lib/axios');
